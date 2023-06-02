@@ -22,6 +22,8 @@ class UploadedFile implements UploadedFileInterface
      * @var null|string
      */
     private $file;
+    
+    private string $key;
 
     private bool $moved = false;
 
@@ -45,10 +47,16 @@ class UploadedFile implements UploadedFileInterface
         $this->client_media_type = $this->fileinfo['type'] ?? null;
         $this->error = $this->fileinfo['error'];
         $this->size = $this->fileinfo['size'];
+        $this->key = $this->fileinfo['key'];
 
         if ($this->isOk()) {
             $this->file = $this->fileinfo['tmp_name'];
         }
+    }
+    
+    public function getKey(): string
+    {
+        return $this->key;
     }
 
     public function isMoved(): bool
