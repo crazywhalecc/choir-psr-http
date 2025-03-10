@@ -22,7 +22,7 @@ class UploadedFile implements UploadedFileInterface
      * @var null|string
      */
     private $file;
-    
+
     private string $key;
 
     private bool $moved = false;
@@ -53,7 +53,7 @@ class UploadedFile implements UploadedFileInterface
             $this->file = $this->fileinfo['tmp_name'];
         }
     }
-    
+
     public function getKey(): string
     {
         return $this->key;

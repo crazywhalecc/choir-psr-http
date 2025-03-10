@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-const CHOIR_PSR_HTTP_VERSION = '1.0.2';
+const CHOIR_PSR_HTTP_VERSION = '1.0.3';
 
 // Choir TCP 连接状态
 const CHOIR_TCP_INITIAL = 0;

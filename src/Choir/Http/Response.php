@@ -35,7 +35,7 @@ class Response implements ResponseInterface
      * @param string                               $version Protocol version
      * @param null|string                          $reason  Reason phrase (when empty a default will be used based on the status code)
      */
-    public function __construct($status = 200, array $headers = [], $body = null, string $version = '1.1', string $reason = null)
+    public function __construct($status = 200, array $headers = [], $body = null, string $version = '1.1', ?string $reason = null)
     {
         // If we got nobody, defer initialization of the stream until Response::getBody()
         if ($body !== '' && $body !== null) {
