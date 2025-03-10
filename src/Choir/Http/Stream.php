@@ -38,9 +38,7 @@ class Stream implements StreamInterface
 
     private ?int $size = null;
 
-    private function __construct()
-    {
-    }
+    private function __construct() {}
 
     /**
      * Closes the stream when the destructed.

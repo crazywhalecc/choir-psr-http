@@ -26,7 +26,7 @@ class FrameFactory
         return new Frame($payload, Opcode::BINARY, true, true);
     }
 
-    public static function createCloseFrame(int $code = null, string $reason = null): Frame
+    public static function createCloseFrame(?int $code = null, ?string $reason = null): Frame
     {
         return new CloseFrame($code, $reason);
     }

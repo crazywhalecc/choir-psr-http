@@ -32,17 +32,11 @@ class CurlClient implements ClientInterface, TimeoutInterface
         $this->curl_options = $curl_options;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function setTimeout(int $timeout)
     {
         $this->curl_options[CURLOPT_TIMEOUT_MS] = $timeout;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function sendRequest(RequestInterface $request): ResponseInterface
     {
         $handle = $this->createHandle($request);

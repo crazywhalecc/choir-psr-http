@@ -6,6 +6,4 @@ namespace Choir\Http\Client\Exception;
 
 use Psr\Http\Client\ClientExceptionInterface;
 
-class ClientException extends \Exception implements ClientExceptionInterface
-{
-}
+class ClientException extends \Exception implements ClientExceptionInterface {}

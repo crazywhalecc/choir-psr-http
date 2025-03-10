@@ -44,7 +44,6 @@ class StreamClient implements TimeoutInterface, ClientInterface
     }
 
     /**
-     * {@inheritdoc}
      * @throws \Exception
      */
     public function sendRequest(RequestInterface $request): ResponseInterface
